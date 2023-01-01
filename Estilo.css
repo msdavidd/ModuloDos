@@ -1,0 +1,35 @@
+.mat-card {
+    border-radius: 32px;
+    margin: 10px 10px;
+    padding: 0px;
+    border-color: #00CCFF;
+}
+    
+    .mat-card#profile-background {
+        display: flex;
+        z-index:10;
+        padding: 16px;
+        width:100%;
+        border-radius: 32px 32px 0 0;
+    }
+
+.profile-image{
+        border-radius: 50%;
+        width:200px;
+        height:200px;
+        position: absolute;
+        bottom:100px;
+        padding: 16px;
+     
+            }
+
+.info-data{
+        border-radius: 50px;
+        margin: 0px;
+        padding: 20px;
+        border-color: #00CCFF;
+        position: relative;
+        margin-top: 60px;
+        line-height: 20px;
+        
+            }
