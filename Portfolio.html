@@ -7,6 +7,10 @@
     <title>PERFIL</title>
     <meta name="description" content="Roughly 155 characters" />
     <link rel="stylesheet" type="text/css" href="Estilo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -15,20 +19,16 @@
         <div id="profile-background">
           <img src="imagen.jpg" />
         </div>
-        <div>
-          <img id="profile-image" src="FOTO.jpg" />
-          <div class="btn-edit">
+      <img id="profile-image" src="FOTO.jpg" /></div>
+          <type="button" class="btn-edit" data-id="1">
             <a href="#" class="btn right"> <i class="fa fa-pen"></i></a>
-          </div>
-        </div>
-      </div>
+                  
       <div class="info-data">
         <div id="info-name"><h1>Melanie Solange David</h1></div>
         <div id="info-university">
           Contadora Pública Nacional
           <a href="http://www.fceco.uner.edu.ar/"
-            >Facultad de Ciencias Económicas, UNER.</a
-          >
+            >Facultad de Ciencias Económicas, UNER.</a>
         </div>
         <div id="info-contact">
           <span>Paraná, Entre Ríos - ARG.</span>
@@ -42,10 +42,37 @@
           Analista Contable
           <a
             href="https://www.arcor.com/ar/plantas-industriales/cartocor-parana"
-            >CARTOCOR SA - Grupo Arcor.</a
-          >
+            >CARTOCOR SA - Grupo Arcor.</a 
+          ></div>
+        
+      
+    </div>
+    </div>
+    </div>
+    
+  
+
+    <div class="mat-card">
+      <div class="card-titles">
+        <h2>Acerca de mí</h2>
+        <type="button" class="btn-edit" data-id="2" onclick="cambiar_parrafo()">
+          <a href="#" class="btn-right">
+            <i class="fa fa-pen"></i>
+          </a>
         </div>
+
+        <p id="text-AcercaDeMi">
+          Me estoy sumergiendo en el mundo de la programación
+        </p>
       </div>
+    </div>
+    
+      <input
+        id="edit-AcercaDeMi"
+        type="text"
+        oninput="myfunction2(this.value)"
+        style="display: none"
+      />
     </div>
   </body>
 </html>
