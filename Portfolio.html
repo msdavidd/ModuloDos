@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE_edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PERFIL</title>
     <meta name="description" content="Roughly 155 characters" />
@@ -19,60 +19,99 @@
         <div id="profile-background">
           <img src="imagen.jpg" />
         </div>
-      <img id="profile-image" src="FOTO.jpg" /></div>
+        <img id="profile-image" src="FOTO.jpg" />
+      </div>
           <type="button" class="btn-edit" data-id="1">
-            <a href="#" class="btn right"> <i class="fa fa-pen"></i></a>
+            <a href="#" class="btn right"> <i class="fa fa-pen"></i>
+             </a>
                   
-      <div class="info-data">
-        <div id="info-name"><h1>Melanie Solange David</h1></div>
-        <div id="info-university">
+        <div class="info-data">
+          <div id="info-name"><h1>Melanie Solange David</h1>
+          </div>
+          <div id="info-university">
           Contadora Pública Nacional
           <a href="http://www.fceco.uner.edu.ar/"
             >Facultad de Ciencias Económicas, UNER.</a>
-        </div>
-        <div id="info-contact">
+         </div>
+         <div id="info-contact">
           <span>Paraná, Entre Ríos - ARG.</span>
           <span>
             <a href="https://ar.linkedin.com/in/melaniedavidd"
-              >Perfil de contacto</a
-            ></span
-          >
-        </div>
-        <div id="info-job">
+              >Perfil de contacto</a> </span>
+          </div>
+          <div id="info-job">
           Analista Contable
           <a
             href="https://www.arcor.com/ar/plantas-industriales/cartocor-parana"
-            >CARTOCOR SA - Grupo Arcor.</a 
-          ></div>
+            >CARTOCOR SA - Grupo Arcor.</a>
+          </div>
         
-      
-    </div>
-    </div>
-    </div>
-    
-  
-
+        </div>
+      </div>
+             
     <div class="mat-card">
       <div class="card-titles">
-        <h2>Acerca de mí</h2>
+         <h2>Acerca de mí </h2>
+        </div>
+         
         <type="button" class="btn-edit" data-id="2" onclick="cambiar_parrafo()">
           <a href="#" class="btn-right">
             <i class="fa fa-pen"></i>
           </a>
-        </div>
+        
+          <div>
+          <p id="text-acercade"> Me estoy sumergiendo en el mundo de la programación</p>
+          </div>      
+     <div> 
+      <input id="edit-acercade" type="text" oninput="myfunction2(this.value)" style= "display: none">
+         </div>
+    </div>
 
-        <p id="text-AcercaDeMi">
-          Me estoy sumergiendo en el mundo de la programación
-        </p>
-      </div>
-    </div>
-    
-      <input
-        id="edit-AcercaDeMi"
-        type="text"
-        oninput="myfunction2(this.value)"
-        style="display: none"
-      />
-    </div>
+    <input type="file" id="file1" onchange="showFile(this)">
+
+<script>
+
+  function cambiar_parrafo() {
+document.getElementById("edit-acercade").style.display="block";
+let texto = document.getElementById("text-acercade").innerText;
+console.log(texto);
+  };
+
+  function myfunction2(valor){
+    document.getElementById("text-acercade").innerText=valor;
+};
+
+function logMessage(message) {
+  console.log(message + "<br>");
+}
+
+let textarea=document.getElementById("edit-acercade")
+textarea.addEventListener('keyup', (e)=> { 
+  logMessage('Key "${e.key}" released [event: keyup]');
+  if (e.key=="Enter") {
+    document.getElementById("edit-acercade").style.display="none"
+  }
+});
+
+function showFile(input) {
+  let file = input.files [0];
+  alert('File name: $(file.name)');
+  alert('Last modified: $(file.lastModified');
+  
+  let reader = new FileReader();
+  reader.readAsText(file);
+  reader.onload = function () {
+    console.log(reader.result);
+    document.getElementById("text-acercade").innerText=reader.result;
+  };
+
+  reader.onerror = function () {
+    console.log(reader.error);
+  };
+}
+
+  
+</script>
+
   </body>
 </html>
